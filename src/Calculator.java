@@ -23,23 +23,25 @@ public class Calculator {
         if (symbols.equals("+")) {
             result = number1 + number2;
             System.out.println("You have chosen addition");
+            System.out.println(number1+"+"+number2+"="+result);
             System.out.println("Result is: " + result);
         }
-        if (symbols.equals("-")) {
+        else if (symbols.equals("-")) {
             result = number1 - number2;
             System.out.println("You have chosen subtraction");
             System.out.println("Result is: " + result);
         }
-        if (symbols.equals("*")) {
+        else if (symbols.equals("*")) {
             result = number1 * number2;
             System.out.println("You have chosen multiplication");
             System.out.println("Result is: " + result);
         }
-        if (symbols.equals("/")) {
+        else if (symbols.equals("/")) {
             result = number1 / number2;
             System.out.println("You have chosen division");
             System.out.println("Result is: " + result);
         }
+
     }
 
 }
