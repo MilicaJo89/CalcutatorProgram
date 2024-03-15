@@ -61,9 +61,9 @@ public class Calculator {
         } catch (ArithmeticException e) {
             System.out.println("Can not divide by zero. Try again.");
         } catch (InputMismatchException e) {
-            System.out.println("Wrong input.Try again");
+            System.out.println("Write number here.Try again");
         } catch (NumberFormatException e) {
-            System.out.println("Symbol goes here not number. Try again.");
+            System.out.println("Write symbol here. Try again.");
         }
     }
 }
