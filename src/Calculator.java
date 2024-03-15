@@ -14,18 +14,16 @@ public class Calculator {
         Scanner scanner = new Scanner(System.in);
 
         try {
-          System.out.println("Welcome to the calculator");
+            System.out.println("Welcome to the calculator");
 
-          System.out.println("Enter first number: ");
-          number1 = scanner.nextDouble();
-
-
+            System.out.println("Enter first number: ");
+            number1 = scanner.nextDouble();
 
 
             System.out.println("Enter the symbol of the operation you want: + , - , * , / ");
             if (scanner.hasNextDouble()) {
                 throw new NumberFormatException();
-            }else {
+            } else {
                 System.out.println("Enter the symbol of the operation you want: + , - , * , / ");
                 symbols = scanner.next();
             }
@@ -33,36 +31,39 @@ public class Calculator {
             System.out.println("Enter second number: ");
             number2 = scanner.nextDouble();
 
-            if (symbols.equals("+")){
-                result=number1+number2;
+            if (symbols.equals("+")) {
+                result = number1 + number2;
                 System.out.println("You have chosen addition");
-                System.out.println(number1+"+"+number2+"="+result);
-                System.out.println("Result is: "+result);
-            } if (symbols.equals("-")) {
-                result=number1-number2;
+                System.out.println(number1 + "+" + number2 + "=" + result);
+                System.out.println("Result is: " + result);
+            }
+            if (symbols.equals("-")) {
+                result = number1 - number2;
                 System.out.println("You have chosen subtraction");
-                System.out.println(number1+"-"+number2+"="+result);
-                System.out.println("Result is: "+result);
-            }  if (symbols.equals("*")) {
-                result=number1*number2;
+                System.out.println(number1 + "-" + number2 + "=" + result);
+                System.out.println("Result is: " + result);
+            }
+            if (symbols.equals("*")) {
+                result = number1 * number2;
                 System.out.println("You have chosen multiplication");
-                System.out.println(number1+"*"+number2+"="+result);
-                System.out.println("Result is: "+result);
-            } if (symbols.equals("/")) {
-                if (number2==0){
+                System.out.println(number1 + "*" + number2 + "=" + result);
+                System.out.println("Result is: " + result);
+            }
+            if (symbols.equals("/")) {
+                if (number2 == 0) {
                     throw new ArithmeticException();
                 }
-                result=number1/number2;
+                result = number1 / number2;
                 System.out.println("You have chosen division");
-                System.out.println(number1+"/"+number2+"="+result);
-                System.out.println("Result is: "+result);
+                System.out.println(number1 + "/" + number2 + "=" + result);
+                System.out.println("Result is: " + result);
             }
-        }catch (ArithmeticException e){
-            System.out.println("Can not divide by zero");
-        }catch (InputMismatchException e){
-            System.out.println("Wrong input");
-        }catch (NumberFormatException e){
-            System.out.println("Input symbol here not number");
+        } catch (ArithmeticException e) {
+            System.out.println("Can not divide by zero. Try again.");
+        } catch (InputMismatchException e) {
+            System.out.println("Wrong input.Try again");
+        } catch (NumberFormatException e) {
+            System.out.println("Symbol goes here not number. Try again.");
         }
     }
 }
