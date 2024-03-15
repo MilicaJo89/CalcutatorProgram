@@ -6,6 +6,8 @@ public class Main {
 
     public static void main(String[] args) {
         String response;
+
+
         Calculator calculator= new Calculator();
         calculator.Calculator();
 
@@ -15,12 +17,12 @@ public class Main {
             System.out.println("Do you want to start the calculator again? yes or no");
             response= scanner.next();
 
-            if (response.equals("yes") || response.equals("YES") || response.equals("Yes")) {
+            if (response.equalsIgnoreCase("yes")) {
                 calculator.Calculator();
-            } else if (response.equals("no") || response.equals("NO") || response.equals("No")) {
-                scanner.close();
+            } else if (response.equalsIgnoreCase("no")) {
+                System.out.println("Calculator is closed");
+                break;
             }
-
         }while (response.equals("yes") || response.equals("YES") || response.equals("Yes"));
     }
 }
