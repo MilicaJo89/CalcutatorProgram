@@ -22,7 +22,7 @@ public class Calculator {
 
             System.out.println("Enter the symbol of the operation you want: + , - , * , / ");
             if (scanner.hasNextDouble()) {
-                throw new NumberFormatException();
+                throw new InputMismatchException();
             } else {
                 System.out.println("Enter the symbol of the operation you want: + , - , * , / ");
                 symbols = scanner.next();
@@ -61,12 +61,7 @@ public class Calculator {
         } catch (ArithmeticException e) {
             System.out.println("Can not divide by zero. Try again.");
         } catch (InputMismatchException e) {
-            System.out.println("Write number here.Try again");
-        } catch (NumberFormatException e) {
-            System.out.println("Write symbol here. Try again.");
+            System.out.println("Wrong input.Try again");
         }
     }
 }
-
-
-

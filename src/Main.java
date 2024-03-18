@@ -23,6 +23,6 @@ public class Main {
                 System.out.println("Calculator is closed");
                 break;
             }
-        }while (response.equals("yes") || response.equals("YES") || response.equals("Yes"));
+        }while (response.equalsIgnoreCase("yes"));
     }
 }
